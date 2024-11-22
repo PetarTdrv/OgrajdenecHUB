@@ -1,0 +1,39 @@
+@startuml
+skin rose
+title ER Diagram - OgrajdenecHUB
+
+entity "Players" {
+  * PlayerID : int
+  --
+  Name : string
+  Position : string
+  PhotoURL : string
+  Stats : string
+}
+
+entity "Matches" {
+  * MatchID : int
+  --
+  Date : date
+  Opponent : string
+  Result : string
+}
+
+entity "Votes" {
+  * VoteID : int
+  --
+  MatchID : int
+  PlayerID : int
+  UserID : int
+}
+
+entity "Fans" {
+  * UserID : int
+  --
+  Name : string
+  Email : string
+}
+
+Players ||--o{ Votes
+Matches ||--o{ Votes
+@enduml
