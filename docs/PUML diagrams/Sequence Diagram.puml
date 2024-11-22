@@ -1,0 +1,21 @@
+@startuml
+skin rose
+title Sequence Diagram - Voting for "Man of the Match"
+
+actor User
+participant Frontend
+participant Backend
+participant Database
+
+User -> Frontend: Select Match
+Frontend -> Backend: Request Player List
+Backend -> Database: Fetch Players for Match
+Database --> Backend: Player List
+Backend --> Frontend: Display Player List
+
+User -> Frontend: Select Player and Submit Vote
+Frontend -> Backend: Send Vote Data
+Backend -> Database: Save Vote
+Database --> Backend: Confirmation
+Backend --> Frontend: Confirmation Message
+@enduml
