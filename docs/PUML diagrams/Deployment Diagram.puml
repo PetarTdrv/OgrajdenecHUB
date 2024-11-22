@@ -1,0 +1,33 @@
+@startuml
+skin rose
+title Deployment Diagram - OgrajdenecHUB
+
+node "Mobile Device" {
+  component "Frontend App" {
+    [Player Profiles]
+    [Voting]
+    [Fen Zone]
+  }
+}
+
+node "Web Server" {
+  component "Backend API" {
+    [PlayerController]
+    [MatchController]
+    [VoteController]
+    [FanContentController]
+  }
+}
+
+node "Azure Cloud" {
+  database "Azure SQL" {
+    [Players]
+    [Matches]
+    [Votes]
+    [Fans]
+  }
+}
+
+"Frontend App" --> "Backend API"
+"Backend API" --> "Azure SQL"
+@enduml
