@@ -1,0 +1,15 @@
+@startuml
+skin rose
+title Activity Diagram - Voting Process
+
+start
+:Select Match;
+:Display Player List;
+if (User votes?) then (Yes)
+  :Submit Vote;
+  :Save Vote in Database;
+else (No)
+  :Exit Voting;
+endif
+stop
+@enduml
