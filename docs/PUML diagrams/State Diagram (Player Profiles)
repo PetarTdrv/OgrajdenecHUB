@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+skin rose
+title State Diagram - OgrajdenecHUB (Player Profile)
+
+[*] --> CreateProfile
+CreateProfile --> ProfileAdded
+ProfileAdded --> DeleteProfile
+ProfileAdded --> DataChange
+DataChange --> DataChanged
+DataChanged --> [*]
+ProfileAdded --> [*]
+@enduml
