@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+skin rose
+title Use Case Diagram - OgrajdenecHUB
+
+actor User
+
+rectangle "OgrajdenecHUB" {
+  User --> (Player Profiles)
+  User --> (Vote for "Man of the Match")
+  User --> (Fen Survey)
+  User --> (Team History)
+  User --> (Match Board)
+  User --> (Fen Zone)
+  User --> (Generating Fan Content)
+}
+@enduml
