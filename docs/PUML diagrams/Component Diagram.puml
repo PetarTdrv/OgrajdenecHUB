@@ -1,0 +1,25 @@
+@startuml
+skin rose
+title Component Diagram - OgrajdenecHUB
+
+package "Frontend" {
+  [Player Profiles Module]
+  [Voting Module]
+  [Fen Survey Module]
+  [Team History Module]
+}
+
+package "Backend" {
+  [PlayerController]
+  [MatchController]
+  [VoteController]
+  [FanContentController]
+}
+
+package "Database" {
+  [Azure SQL]
+}
+
+[Frontend] --> [Backend]
+[Backend] --> [Database]
+@enduml
